@@ -6,7 +6,7 @@ import { environment } from 'src/environments/environment';
 export class Interceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const newReq = req.clone({
-      params: (req.params.get('apiKey') ? req.params : req.params.append('apiKey', environment.apiKey))
+      params: (req.params.get('api_key') ? req.params : req.params.append('api_key', environment.apiKey))
     });
 
     return next.handle(newReq);

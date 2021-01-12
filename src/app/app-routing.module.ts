@@ -5,7 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 const routes: Routes = [
   {
     path: 'movies',
-    loadChildren: () => import('./modules/movies/movies.module').then((m) => m.MoviesModule),
+    loadChildren: () => import('./modules/movies/movies.module').then((m) => m.MoviesModule)
   },
   {
     path: '',

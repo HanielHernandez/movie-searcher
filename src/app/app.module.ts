@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Interceptor } from './core/http/interceptor.service';
+import { MoviesModule } from './modules/movies/movies.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { Interceptor } from './core/http/interceptor.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MoviesModule,
   ],
   providers: [
     {
