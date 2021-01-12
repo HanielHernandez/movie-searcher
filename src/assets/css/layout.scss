@@ -173,3 +173,18 @@ p,
 table {
   margin-bottom: 1rem;
 }
+.container {
+  margin: 0px auto;
+}
+
+.container-xl {
+  max-width: 1440px;
+}
+
+.container-lg {
+  max-width: 1280px;
+}
+
+.container-md {
+  max-width: 1024px;
+}
