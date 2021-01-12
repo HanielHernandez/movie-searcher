@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from '../../models/movie';
+import { ResponseResult } from '../../models/reponse';
 import { MoviesService } from '../../service/movies.service';
 
 @Component({
@@ -8,7 +10,11 @@ import { MoviesService } from '../../service/movies.service';
 })
 export class MovieListComponent implements OnInit {
 
-  constructor(private movies: MoviesService) { }
+  loading: boolean;
+  movieList: ResponseResult<Movie>;
+  constructor(private movies: MoviesService) {
+    this.loading = false;
+  }
 
   ngOnInit(): void {
     this.getMovies();
@@ -18,8 +24,13 @@ export class MovieListComponent implements OnInit {
    * Obtains a list of movies
    */
   getMovies(): void {
+    this.loading = true;
     this.movies.discover().subscribe(data => {
-      console.log('movies', data);
+      this.loading = false;
+      this.movieList = data;
+    }, error => {
+      this.loading = false;
+      console.error(error);
     });
   }
 

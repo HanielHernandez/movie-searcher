@@ -229,5 +229,19 @@ $card-avatar-width: 40px !default;
 $card-avatar-height: 40px !default;
 $card-avatar-margin-right: 1rem !default;
 
+// spinner
+$spinner-width: 2.5rem !default;
+$spinner-height: 2.5rem !default;
+$spinner-boder-width: 2px !default;
+$spinner-boder-style: solid !default;
+$spinner-border-color: rgba(0, 0, 0, 0.12) !default;
+$spinner-line-width: 2px !default;
+$spinner-line-color: rgba(0, 0, 0, 0.8) !default;
+$spinner-line-style: solid !default;
+$spinner-animation-time: 1s !default;
+$spinner-animation-ease: linear !default;
+$spinner-animation: spin !default;
+
+//sidebar
 $sidebar-width: 350px !default;
 $sidebar-position: relative !default;
