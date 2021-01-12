@@ -3,8 +3,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "assets/css/_variables.scss";
 $font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
+$body-background-color: #121212;
+$font-color: rgba(255, 255, 255, 0.87);
+$white-boder: rgba(255, 255, 255, 0.12);
+$white-default: rgba(255, 255, 255, 0.12);
+
 $theme-colors: (
   golden: #ffd700,
   red-carpet: #c32a2a,
+  dark: $body-background-color,
+  light-gray: rgba(0, 0, 0, 0.12),
 );
+$form-input-background-color: $body-background-color;
+$form-input-border-color: $white-boder;
+$form-input-active-border-color: #fff;
+$form-input-font-color: $font-color;
+
+$button-bg-color: $body-background-color;
+$button-border-color: $white-boder;
 @import "assets/css/main.scss";

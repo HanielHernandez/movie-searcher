@@ -35,12 +35,12 @@
 
 @mixin create-navbar($name, $color) {
   .navbar-#{$name} {
-    background-color: $color !important;
+    background-color: $color;
     color: set-color($color);
-    border-bottom: $nav-bar-border-width solid set-border-color($color) !important;
+    border-bottom: $nav-bar-border-width solid set-border-color($color);
     .nav {
       &-link {
-        color: set-color($color) !important;
+        color: set-color($color);
       }
     }
   }

@@ -1,7 +1,7 @@
 @import "_colors-maps.scss";
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200!default;0,300!default;0,400!default;0,600!default;0,700!default;0,900!default;1,200!default;1,300!default;1,400!default;1,600!default;1,700!default;1,900&display=swap");
 $default-border: 1px solid rgba(0, 0, 0, 0.12);
-
+$font-color: rgba(0, 0, 0, 0.8) !default;
 //theme colors
 $theme-colors: () !default;
 $theme-colors: map-merge(
@@ -96,7 +96,8 @@ $sides: (
 );
 $positions: ("fixed", "absolute", "relative", "sticky", "initial", "inherit");
 $displays: ("fixed", "absolute", "relative", "sticky", "initial", "inherit");
-
+//body
+$body-background-color: rgba(0, 0, 0, 0) !default;
 //links
 $link-color: #1976d2 !default;
 $border-radius: 5px !default;
@@ -157,6 +158,13 @@ $button-padding: 0.5rem 1rem !default;
 $button-bg-color: #fff !default;
 $button-border-color: #e0e0e0 !default;
 $button-radius: 0.25rem !default;
+$button-focus-outline-style: solid !default;
+$button-focus-outline-width: 1px !default;
+$button-focus-outline-color: $default-border !default;
+
+$button-focus-outline: $button-focus-outline-width $button-focus-outline-style
+  $button-focus-outline-color;
+
 $flat-button-hover-color: rgba(#000, 0.05);
 //Forms
 $form-field-margin-bottom: 1rem !default;
@@ -164,18 +172,18 @@ $form-field-label-size: 1rem !default;
 $form-field-label-weigth: 700 !default;
 $form-field-label-mb: 0.5rem !default;
 $form-field-label-heigth: 1.25 !default;
-$form-field-label-color: rgba(0, 0, 0, 0.87);
+$form-field-label-color: rgba(0, 0, 0, 0.87) !default;
 
 $form-input-padding: 0.5rem 1rem !default;
-$font-input-font-size: 1rem !default;
-$font-input-font-color: rgba(0, 0, 0, 0.6);
-$font-input-placeholder-color: rgba(0, 0, 0, 0.12);
-$font-input-border-width: 1px !default;
-$font-input-border-color: $default-border-color !default;
-$font-input-border-radius: 0.25rem !default;
-$font-input-background-color: #fff !default;
-$font-input-active-border-width: $font-input-border-width !default;
-$font-input-active-border-color: rgba(0, 0, 0, 0.6);
+$form-input-font-size: 1rem !default;
+$form-input-font-color: rgba(0, 0, 0, 0.6) !default;
+$form-input-placeholder-color: rgba(0, 0, 0, 0.12) !default;
+$form-input-border-width: 1px !default;
+$form-input-border-color: $default-border-color !default;
+$form-input-border-radius: 0.25rem !default;
+$form-input-background-color: #fff !default;
+$form-input-active-border-width: $form-input-border-width !default;
+$form-input-active-border-color: rgba(0, 0, 0, 0.6) !default;
 $form-input-invalid-color: #b71c1c !default;
 
 $form-text-color: rgba(0, 0, 0, 0.6);
@@ -186,7 +194,7 @@ $table-bg-color: #fff !default;
 $table-heading-font-size: 1rem !default;
 $table-heading-font-weight: 700 !default;
 $table-cell-padding: 0.5em 0.75em !default;
-$table-border: 1px solid rgba(0, 0, 0, 0.12);
+$table-border: 1px solid rgba(0, 0, 0, 0.12) !default;
 $table-striped-bg-color: #f5f5f5 !default;
 $table-hover-bg-color: #e0e0e0 !default;
 $font-size: 16px !default;
