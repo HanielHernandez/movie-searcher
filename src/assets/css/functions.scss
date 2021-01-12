@@ -1,5 +1,6 @@
 @import "./mixins/buttons";
 @import "./mixins/borders";
+@import "./mixins/spinner";
 
 @function set-color($background) {
   @if ($background == rgba(0, 0, 0, 0)) {
@@ -72,4 +73,5 @@
   @include create-text-for-theme($name, $color);
   @include create-borders($name, $color);
   @include create-hover-for-theme($name, $color);
+  @include create-spinner-for-theme($name, $color);
 }

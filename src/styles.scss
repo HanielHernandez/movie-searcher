@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("assets/fonts/RobotoSlab-Regular.ttf");
+  font-weight: 400;
+}
+
 @import "assets/css/_variables.scss";
 $font-family: "Roboto Slab", Arial, Helvetica, sans-serif;
 $body-background-color: #121212;
@@ -13,6 +18,8 @@ $theme-colors: (
   red-carpet: #c32a2a,
   dark: $body-background-color,
   light-gray: rgba(0, 0, 0, 0.12),
+  black-transparent: rgba(0, 0, 0, 0.87),
+  body-color: rgba(#fff, 0.6),
 );
 $form-input-background-color: $body-background-color;
 $form-input-border-color: $white-boder;

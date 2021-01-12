@@ -1,4 +1,5 @@
 .spinner {
+  position: inline-block;
   width: $spinner-width;
   height: $spinner-height;
   border-radius: 50%;
@@ -14,5 +15,16 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@for $i from 1 through $lop-size {
+  .spinner.w-#{$i} {
+    width: $i * 8px;
+    height: $i * 8px;
+  }
+  .spinner.t-#{$i} {
+    border-width: $i * 1px;
+    //height: $i * 8px;
   }
 }

@@ -34,4 +34,8 @@ export class MovieListComponent implements OnInit {
     });
   }
 
+  getImage(imageName: string): string {
+    return this.movies.getImage(imageName, 'w342');
+  }
+
 }
