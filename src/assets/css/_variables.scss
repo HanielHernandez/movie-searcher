@@ -1,14 +1,18 @@
 @import "_colors-maps.scss";
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200!default;0,300!default;0,400!default;0,600!default;0,700!default;0,900!default;1,200!default;1,300!default;1,400!default;1,600!default;1,700!default;1,900&display=swap");
 $default-border: 1px solid rgba(0, 0, 0, 0.12);
 
 //theme colors
-$theme-colors: (
-  "dark": #212121,
-  "light": #e0e0e0,
-  "primary": #1e88e5,
-  "transparent": rgba(0, 0, 0, 0),
-  "white": #fff,
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "dark": #212121,
+    "light": #e0e0e0,
+    "primary": #1e88e5,
+    "transparent": rgba(0, 0, 0, 0),
+    "white": #fff,
+  ),
+  $theme-colors
 );
 //font sizes use in letter
 $font-sizes: (
@@ -54,18 +58,18 @@ $text-font-sizes: (
   "9xl": 8rem,
 );
 
-$viewport-from: 1;
-$viewport-to: 101;
+$viewport-from: 1 !default;
+$viewport-to: 101 !default;
 
 $default-border-color: rgba(0, 0, 0, 0.12);
-$default-border-radius: 0.5rem;
+$default-border-radius: 0.5rem !default;
 
-$lop-size: 24; //defines the amount of interations margin and padding does: example $lop-size: 20 will create  class  .m-{1-20} and .p-{1-20}
+$lop-size: 24 !default; //defines the amount of interations margin and padding does: example $lop-size: 20 will create  class  .m-{1-20} and .p-{1-20}
 
-$xl-breakpoint: 1280px;
-$lg-breakpoint: 1024px;
-$md-breakpoint: 768px;
-$sm-breakpoint: 576px;
+$xl-breakpoint: 1280px !default;
+$lg-breakpoint: 1024px !default;
+$md-breakpoint: 768px !default;
+$sm-breakpoint: 576px !default;
 
 $breakpoints: (
   "sm": $sm-breakpoint,
@@ -94,128 +98,128 @@ $positions: ("fixed", "absolute", "relative", "sticky", "initial", "inherit");
 $displays: ("fixed", "absolute", "relative", "sticky", "initial", "inherit");
 
 //links
-$link-color: #1976d2;
-$border-radius: 5px;
+$link-color: #1976d2 !default;
+$border-radius: 5px !default;
 //navs
-$nav-bar-default-bg-color: #fff;
-$nav-bar-border-color: #e0e0e0;
-$nav-bar-border-width: 1px;
-$nav-brand-font-size: 1.5rem;
-$nav-brand-font-weight: 700;
-$nav-brand-padding: 0rem 1rem;
+$nav-bar-default-bg-color: #fff !default;
+$nav-bar-border-color: #e0e0e0 !default;
+$nav-bar-border-width: 1px !default;
+$nav-brand-font-size: 1.5rem !default;
+$nav-brand-font-weight: 700 !default;
+$nav-brand-padding: 0rem 1rem !default;
 
-$nav-link-padding: 1rem;
-$navbar-link-font-size: 1rem;
-$nav-link-default-color: #212121;
+$nav-link-padding: 1rem !default;
+$navbar-link-font-size: 1rem !default;
+$nav-link-default-color: #212121 !default;
 $nav-link-hover-bg-color: rgba(0, 0, 0, 0.12);
-$nav-line-height: 1.5;
+$nav-line-height: 1.5 !default;
 //contianer
-$container-padding: 1rem;
+$container-padding: 1rem !default;
 
 //messages
-$message-padding: 1rem;
-$message-padding-y: 1rem;
-$message-padding-x: 1rem;
-$message-margin-bottom: 0.5rem;
-$message-border-width: 1px;
-$message-border-radius: 5px;
+$message-padding: 1rem !default;
+$message-padding-y: 1rem !default;
+$message-padding-x: 1rem !default;
+$message-margin-bottom: 0.5rem !default;
+$message-border-width: 1px !default;
+$message-border-radius: 5px !default;
 /*----messages success----*/
-$message-success-color: #1b5e20;
-$message-success-border: #4caf50;
-$message-succes-background: #c8e6c9;
+$message-success-color: #1b5e20 !default;
+$message-success-border: #4caf50 !default;
+$message-succes-background: #c8e6c9 !default;
 
-$message-danger-color: #b71c1c;
-$message-danger-border: #f44336;
-$message-danger-background: #ffebee;
+$message-danger-color: #b71c1c !default;
+$message-danger-border: #f44336 !default;
+$message-danger-background: #ffebee !default;
 
-$color-error: #f44336;
-$background: #fff;
+$color-error: #f44336 !default;
+$background: #fff !default;
 
 //headins h1
-$heading-font-weigth: 700;
-$heading-font-base-size: 64px;
-$base-font-weigth: 400;
-$base-font-size: 16px;
+$heading-font-weigth: 700 !default;
+$heading-font-base-size: 64px !default;
+$base-font-weigth: 400 !default;
+$base-font-size: 16px !default;
 
 //borders
-$border-default-color: #e0e0e0;
+$border-default-color: #e0e0e0 !default;
 
 $primary: rgb(51, 133, 255);
-$secondary: #eee;
+$secondary: #eee !default;
 $danger: rgb(255, 82, 82);
 $success: rgb(60, 223, 114);
 $warning: rgb(255, 200, 20);
 $info: rgb(17, 227, 255);
-$bg-color: #fff;
+$bg-color: #fff !default;
 
 //Buttons
-$button-padding: 0.5rem 1rem;
-$button-bg-color: #fff;
-$button-border-color: #e0e0e0;
-$button-radius: 0.25rem;
+$button-padding: 0.5rem 1rem !default;
+$button-bg-color: #fff !default;
+$button-border-color: #e0e0e0 !default;
+$button-radius: 0.25rem !default;
 $flat-button-hover-color: rgba(#000, 0.05);
 //Forms
-$form-field-margin-bottom: 1rem;
-$form-field-label-size: 1rem;
-$form-field-label-weigth: 700;
-$form-field-label-mb: 0.5rem;
-$form-field-label-heigth: 1.25;
+$form-field-margin-bottom: 1rem !default;
+$form-field-label-size: 1rem !default;
+$form-field-label-weigth: 700 !default;
+$form-field-label-mb: 0.5rem !default;
+$form-field-label-heigth: 1.25 !default;
 $form-field-label-color: rgba(0, 0, 0, 0.87);
 
-$form-input-padding: 0.5rem 1rem;
-$font-input-font-size: 1rem;
+$form-input-padding: 0.5rem 1rem !default;
+$font-input-font-size: 1rem !default;
 $font-input-font-color: rgba(0, 0, 0, 0.6);
 $font-input-placeholder-color: rgba(0, 0, 0, 0.12);
-$font-input-border-width: 1px;
-$font-input-border-color: $default-border-color;
-$font-input-border-radius: 0.25rem;
-$font-input-background-color: #fff;
-$font-input-active-border-width: $font-input-border-width;
+$font-input-border-width: 1px !default;
+$font-input-border-color: $default-border-color !default;
+$font-input-border-radius: 0.25rem !default;
+$font-input-background-color: #fff !default;
+$font-input-active-border-width: $font-input-border-width !default;
 $font-input-active-border-color: rgba(0, 0, 0, 0.6);
-$form-input-invalid-color: #b71c1c;
+$form-input-invalid-color: #b71c1c !default;
 
 $form-text-color: rgba(0, 0, 0, 0.6);
-$form-text-size: 0.75rem;
+$form-text-size: 0.75rem !default;
 
 /*TABLES*/
-$table-bg-color: #fff;
-$table-heading-font-size: 1rem;
-$table-heading-font-weight: 700;
-$table-cell-padding: 0.5em 0.75em;
+$table-bg-color: #fff !default;
+$table-heading-font-size: 1rem !default;
+$table-heading-font-weight: 700 !default;
+$table-cell-padding: 0.5em 0.75em !default;
 $table-border: 1px solid rgba(0, 0, 0, 0.12);
-$table-striped-bg-color: #f5f5f5;
-$table-hover-bg-color: #e0e0e0;
-$font-size: 16px;
-$nav-bar-padding: 0.5rem 1rem;
-$font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+$table-striped-bg-color: #f5f5f5 !default;
+$table-hover-bg-color: #e0e0e0 !default;
+$font-size: 16px !default;
+$nav-bar-padding: 0.5rem 1rem !default;
+$font-family: "Source Sans Pro", Arial, Helvetica, sans-serif !default!default;
 
 /*LIST*/
 $list-border: 1px solid rgba(0, 0, 0, 0.12);
-$list-border-radius: 5px;
-$list-item-padding: 0.5rem 1rem;
-$list-item-hover-color: #eee;
-$list-margin-bottom: 1rem;
+$list-border-radius: 5px !default;
+$list-item-padding: 0.5rem 1rem !default;
+$list-item-hover-color: #eee !default;
+$list-margin-bottom: 1rem !default;
 
 /*cards*/
-$card-padding: 1rem;
-$card-border-width: 1px;
-$card-border-style: solid;
+$card-padding: 1rem !default;
+$card-border-width: 1px !default;
+$card-border-style: solid !default;
 $card-border-color: rgba(0, 0, 0, 0.12);
-$card-border-radius: 5px;
+$card-border-radius: 5px !default;
 
-$card-title-font-size: 20px;
-$card-title-font-weight: 600;
+$card-title-font-size: 20px !default;
+$card-title-font-weight: 600 !default;
 $card-title-font-color: rgba(0, 0, 0, 0.8);
-$card-title-line-height: 1.2;
+$card-title-line-height: 1.2 !default;
 
-$card-subtitle-font-size: 16px;
-$card-subtitle-font-weight: 400;
+$card-subtitle-font-size: 16px !default;
+$card-subtitle-font-weight: 400 !default;
 $card-subtitle-font-color: rgba(0, 0, 0, 0.53);
-$card-subtitle-line-height: 1.25;
+$card-subtitle-line-height: 1.25 !default;
 
-$card-avatar-width: 40px;
-$card-avatar-height: 40px;
-$card-avatar-margin-right: 1rem;
+$card-avatar-width: 40px !default;
+$card-avatar-height: 40px !default;
+$card-avatar-margin-right: 1rem !default;
 
-$sidebar-width: 350px;
-$sidebar-position: relative;
+$sidebar-width: 350px !default;
+$sidebar-position: relative !default;

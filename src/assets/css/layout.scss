@@ -143,7 +143,7 @@ $align-positions: (
 
 @mixin just-align($name, $prop, $arr) {
   @each $mod, $dir in $arr {
-    &.#{$name}-#{$mod} {
+    .#{$name}-#{$mod} {
       #{$prop}: #{$dir};
     }
   }
