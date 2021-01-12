@@ -1,0 +1,172 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0px;
+  padding: 0px;
+}
+
+blockquote,
+body,
+dd,
+dl,
+dt,
+fieldset,
+figure,
+hr,
+html,
+iframe,
+legend,
+li,
+ol,
+p,
+pre,
+textarea,
+ul {
+  margin: 0;
+  padding: 0;
+}
+p {
+  display: block;
+}
+
+.container,
+.row,
+.col {
+  margin: 0px;
+  padding: 0px;
+}
+.row,
+.col {
+  display: flex;
+  width: 100%;
+}
+.row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: top;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.col {
+  & {
+    width: 100%;
+  }
+}
+@mixin create-columns($prefix) {
+  @for $i from 1 through 12 {
+    .col-w-#{$prefix}-#{$i} {
+      flex: 8.33% * $i;
+      max-width: 8.33% * $i;
+    }
+  }
+}
+
+@for $i from 1 through 12 {
+  .col-w-#{$i} {
+    flex: 8.33% * $i;
+    max-width: 8.33% * $i;
+  }
+}
+
+@mixin create-width-fractions-for-breakpoint($breakpoint-prefix, $base) {
+  @for $i from 1 through $base {
+    $width: $i * 100% / $base;
+    $fraction: #{$i}\/#{$base};
+    .w-#{$breakpoint-prefix}-#{$fraction} {
+      width: $width;
+      max-width: $width;
+    }
+  }
+}
+
+@mixin create-height-fraction-for-breakpoint($breakpoint, $prefix, $width) {
+  @media (min-width: $breakpoint) {
+    .#{$prefix} {
+      width: $width;
+      max-width: $width;
+    }
+  }
+}
+
+@mixin create-fraction-width($base) {
+  @for $i from 1 through $base {
+    $width: $i * 100% / $base;
+    $fraction: #{$i}\/#{$base};
+
+    .w-#{$fraction} {
+      width: $width;
+      max-width: $width;
+    }
+    .h-#{$fraction} {
+      height: $width;
+      max-height: $width;
+    }
+  }
+}
+
+@include create-fraction-width(2);
+@include create-fraction-width(3);
+@include create-fraction-width(4);
+@include create-fraction-width(6);
+@include create-fraction-width(12);
+
+@each $prefix, $value in $breakpoints {
+  @media (min-width: $value) {
+  }
+}
+
+$justify-positions: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  around: space-around,
+  between: space-between,
+  evenly: space-evenly,
+);
+$align-positions: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  stretch: stretch,
+  baseline: baseline,
+);
+
+@mixin just-align($name, $prop, $arr) {
+  @each $mod, $dir in $arr {
+    &.#{$name}-#{$mod} {
+      #{$prop}: #{$dir};
+    }
+  }
+}
+
+@include just-align("align", "align-items", $align-positions);
+@include just-align("justify", "justify-content", $justify-positions);
+
+@for $i from $viewport-from to $viewport-to {
+  .w-#{$i}vw {
+    width: #{$i}vw;
+  }
+  .h-#{$i}vh {
+    height: #{$i}vh;
+  }
+}
+
+@for $i from 1 to 5 {
+  h#{i} {
+    padding-bottom: 1rem;
+  }
+}
+p,
+table {
+  margin-bottom: 1rem;
+}

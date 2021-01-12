@@ -1,0 +1,29 @@
+@mixin create-button-for-theme($name, $theme-color) {
+  $hover-color: darken($theme-color, 12%);
+  .btn-#{$name} {
+    background-color: $theme-color;
+    color: set-color($theme-color);
+    border: 0px;
+    &:hover {
+      background-color: $hover-color;
+      color: set-color($hover-color);
+    }
+  }
+  .btn-#{$name}-outline {
+    background-color: transparent;
+    color: $theme-color;
+    border: 1px solid $theme-color;
+    &:hover {
+      background-color: $theme-color;
+      color: set-color($theme-color);
+    }
+  }
+  .btn-#{$name}-flat {
+    background-color: transparent;
+    color: $theme-color;
+    border: none;
+    &:hover {
+      background-color: rgba($theme-color, 0.5);
+    }
+  }
+}

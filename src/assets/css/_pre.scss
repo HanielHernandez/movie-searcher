@@ -1,0 +1,25 @@
+pre {
+  background-color: #eee;
+  padding: 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  overflow: auto;
+  .tag {
+    color: #1e88e5;
+  }
+  .prop {
+    color: #ff8f00;
+  }
+  .val {
+    color: #ef5350;
+  }
+  span {
+    display: inline-block;
+  }
+  code {
+    direction: ltr;
+    * {
+      font-family: monospace;
+    }
+  }
+}

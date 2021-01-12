@@ -1,0 +1,53 @@
+@mixin create-padding-for-breakpoint($padding-size, $breakpoint, $prefix) {
+  .p-#{$prefix}-#{$padding-size},
+  .px-#{$prefix}-#{$padding-size},
+  .pr-#{$prefix}-#{$padding-size} {
+    padding-right: 0.25rem * $padding-size;
+  }
+  .p-#{$prefix}-#{$padding-size},
+  .px-#{$prefix}-#{$padding-size},
+  .pl-#{$prefix}-#{$padding-size} {
+    padding-left: 0.25rem * $padding-size;
+  }
+  .p-#{$prefix}-#{$padding-size},
+  .py-#{$prefix}-#{$padding-size},
+  .pt-#{$prefix}-#{$padding-size} {
+    padding-top: 0.25rem * $padding-size;
+  }
+  .p-#{$prefix}-#{$padding-size},
+  .py-#{$prefix}-#{$padding-size},
+  .pb-#{$prefix}-#{$padding-size} {
+    padding-bottom: 0.25rem * $padding-size;
+  }
+}
+
+@mixin create-padding($padding-size) {
+  .p-#{$padding-size},
+  .px-#{$padding-size},
+  .pr-#{$padding-size} {
+    padding-right: 0.25rem * $padding-size;
+  }
+  .p-#{$padding-size},
+  .px-#{$padding-size},
+  .pl-#{$padding-size} {
+    padding-left: 0.25rem * $padding-size;
+  }
+  .p-#{$padding-size},
+  .py-#{$padding-size},
+  .pt-#{$padding-size} {
+    padding-top: 0.25rem * $padding-size;
+  }
+  .p-#{$padding-size},
+  .py-#{$padding-size},
+  .pb-#{$padding-size} {
+    padding-bottom: 0.25rem * $padding-size;
+  }
+  @include create-padding-for-breakpoint($padding-size, $sm-breakpoint, "sm");
+  @include create-padding-for-breakpoint($padding-size, $md-breakpoint, "md");
+  @include create-padding-for-breakpoint($padding-size, $lg-breakpoint, "lg");
+  @include create-padding-for-breakpoint($padding-size, $xl-breakpoint, "xl");
+}
+
+@for $i from 0 through 24 {
+  @include create-padding($i);
+}
