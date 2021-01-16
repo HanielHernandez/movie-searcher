@@ -1,0 +1,8 @@
+@mixin create-z-index() {
+  @for $i from 1 through $lop-size {
+    $prefix: $i * 5;
+    .z-#{$prefix} {
+      z-index: $prefix;
+    }
+  }
+}

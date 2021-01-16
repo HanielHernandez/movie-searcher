@@ -4,7 +4,8 @@
     "sources": [
         "functions.scss",
         "mixins/_buttons.scss",
-        "mixins/_borders.scss"
+        "mixins/_borders.scss",
+        "mixins/_spinner.scss"
     ],
     "names": [],
     "file": "functions.css"
