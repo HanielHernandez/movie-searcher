@@ -1,0 +1,60 @@
+.card {
+  border: $card-border-width $card-border-style $card-border-color;
+  border-radius: $card-border-radius;
+  margin-bottom: 1rem;
+  &-head {
+    padding: $card-padding;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  &-body {
+    padding: $card-padding;
+    padding-top: 0px;
+    p {
+      margin-bottom: 0px;
+    }
+  }
+  &-avatar {
+    width: $card-avatar-width;
+    height: $card-avatar-height;
+    margin-right: $card-avatar-margin-right;
+  }
+  &-title,
+  &-subtitle {
+    margin-bottom: 0px;
+  }
+  &-img {
+    width: 100%;
+    object-fit: cover;
+  }
+  &-title {
+    font-size: $card-title-font-size;
+    font-weight: $card-title-font-weight;
+    color: $card-title-font-color;
+    line-height: $card-title-line-height;
+    margin-bottom: 0px;
+  }
+  &-subtitle {
+    font-size: $card-subtitle-font-size;
+    font-weight: $card-subtitle-font-weight;
+    color: $card-subtitle-font-color;
+    line-height: $card-subtitle-line-height;
+  }
+  &-actions {
+    border-top: 1px solid rgba($color: #000000, $alpha: 0.12);
+    .btn {
+      padding: 1rem;
+      border-radius: 0px;
+      margin: 0px;
+      &:first-child {
+        border-bottom-left-radius: 5px;
+      }
+    }
+    /*.btn {
+      padding: 1rem;
+      margin: 0px;
+    }*/
+  }
+}

@@ -1,0 +1,6 @@
+@mixin create-spinner-for-theme($theme-name, $theme-color) {
+  .spinner-#{$theme-name} {
+    border-color: rgba($theme-color, 0.12);
+    border-right-color: rgba($theme-color, 0.87);
+  }
+}

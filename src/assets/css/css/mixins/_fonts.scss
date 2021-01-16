@@ -1,0 +1,5 @@
+@mixin font-weight-for-breakpoint($weight, $prefix, $breakpoint-prefix) {
+  .font-#{$breakpoint-prefix}-#{$prefix} {
+    font-weight: $weight;
+  }
+}

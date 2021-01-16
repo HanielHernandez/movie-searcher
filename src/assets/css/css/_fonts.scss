@@ -1,0 +1,63 @@
+@import "mixins/_fonts";
+* :not(code) {
+  font-family: $font-family;
+  font-size: $base-font-size;
+  color: $font-color;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    margin-top: 0px;
+  }
+}
+
+@for $i from 1 through 6 {
+  .h#{$i},
+  h#{$i} {
+    font-weight: $heading-font-weigth;
+    margin-bottom: 1rem;
+  }
+}
+
+p {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.italic {
+  font-style: italic;
+}
+.bold {
+  font-weight: bold;
+}
+
+@each $text-font-target, $text-font-size in $heading-font-sizes {
+  #{$text-font-target} {
+    font-size: $text-font-size;
+  }
+  .#{$text-font-target} {
+    font-size: $text-font-size;
+  }
+}
+
+@each $font-size-prefix, $font-size in $text-font-sizes {
+  .font-#{$font-size-prefix} {
+    font-size: $font-size;
+  }
+}
+
+@each $font-size-name, $font-size in $font-sizes {
+  .#{$font-size-name} {
+    font-size: $font-size;
+  }
+}
+
+@each $font-weight-prefix, $font-weight in $font-weights {
+  .font-#{$font-weight-prefix} {
+    font-weight: $font-weight;
+  }
+}
+
+i,
+span.material-icons {
+  vertical-align: middle;
+}

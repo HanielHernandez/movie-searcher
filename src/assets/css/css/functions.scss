@@ -1,0 +1,77 @@
+@import "./mixins/buttons";
+@import "./mixins/borders";
+@import "./mixins/spinner";
+
+@function set-color($background) {
+  @if ($background == rgba(0, 0, 0, 0)) {
+    @return #000;
+  }
+
+  $r: red($background);
+  $g: green($background);
+  $b: blue($background);
+  $yiq: (($r * 299) + ($g * 587) + ($b * 114))/1000;
+
+  @if ($yiq >= 128) {
+    @return #212121;
+  } @else {
+    @return #ffffff;
+  }
+}
+
+@function is-map($var) {
+  @return type-of($var) == "map";
+}
+
+@function create-border($color) {
+  @return 1px solid $color;
+}
+
+@function set-border-color($color) {
+  @if ($color == rgba(0, 0, 0, 0)) {
+    @return $color;
+  }
+  @return lighten($color, 50%);
+}
+
+@mixin create-navbar($name, $color) {
+  .navbar-#{$name} {
+    background-color: $color;
+    color: set-color($color);
+    border-bottom: $nav-bar-border-width solid set-border-color($color);
+    .nav {
+      &-link {
+        color: set-color($color);
+      }
+    }
+  }
+}
+
+@mixin create-background-for-theme($name, $color) {
+  .bg-#{$name} {
+    background-color: $color;
+    color: set-color($color);
+  }
+}
+
+@mixin create-hover-for-theme($name, $color) {
+  .hover-#{$name}:hover {
+    background-color: $color;
+  }
+}
+
+@mixin create-text-for-theme($name, $color) {
+  .text-#{$name} {
+    color: $color !important;
+  }
+}
+
+@mixin create-theme($name, $color) {
+  @include create-navbar($name, $color);
+  @include create-button-for-theme($name, $color);
+  @include create-background-for-theme($name, $color);
+  @include create-text-for-theme($name, $color);
+  @include create-borders($name, $color);
+  @include create-hover-for-theme($name, $color);
+  @include create-spinner-for-theme($name, $color);
+}

@@ -1,0 +1,60 @@
+.table-fixed {
+  table-layout: fixed;
+}
+
+.table-fixed {
+  table-layout: auto;
+}
+table.table-full {
+  width: 100%;
+}
+.table {
+  border-collapse: collapse;
+  background-color: $table-bg-color;
+  th {
+    font-size: $table-heading-font-size;
+    font-weight: $table-heading-font-weight;
+  }
+  th,
+  td {
+    padding: $table-cell-padding;
+    border-bottom: $table-border;
+  }
+}
+.table-border {
+  border: $table-border;
+  td,
+  th {
+    border: $table-border;
+  }
+}
+.table-striped {
+  tr:nth-child(2n) {
+    background-color: $table-striped-bg-color;
+  }
+}
+.table-hover {
+  tr {
+    transition: all 0.2s ease-in-out;
+  }
+  tr:hover {
+    background-color: $table-hover-bg-color;
+  }
+}
+table {
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6,
+  p {
+    margin: 0px !important;
+  }
+}

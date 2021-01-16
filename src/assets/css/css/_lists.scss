@@ -1,0 +1,19 @@
+.list {
+  list-style-type: none;
+  border-radius: $list-border-radius;
+  border: $list-border;
+  margin-bottom: $list-margin-bottom;
+
+  &.list-border {
+    .item {
+      border-bottom: $list-border;
+    }
+  }
+
+  .item {
+    padding: $list-item-padding;
+    &:hover {
+      background-color: $list-item-hover-color;
+    }
+  }
+}

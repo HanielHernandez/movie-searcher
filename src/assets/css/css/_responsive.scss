@@ -1,0 +1,35 @@
+@mixin create-columns-for-breakpoint($breakpoint, $prefix) {
+  @media (max-width: $breakpoint) {
+    @include create-navbar-collapse-for-breakpoint($prefix);
+  }
+  @media (min-width: $breakpoint) {
+    .hide-#{$prefix} {
+      display: none;
+    }
+    .show-#{$prefix} {
+      display: block;
+    }
+
+    @include create-columns($prefix);
+    @include create-width-fractions-for-breakpoint($prefix, 12);
+    @include create-width-fractions-for-breakpoint($prefix, 6);
+    @include create-width-fractions-for-breakpoint($prefix, 4);
+    @include create-width-fractions-for-breakpoint($prefix, 3);
+    @include create-width-fractions-for-breakpoint($prefix, 2);
+    @for $i from 1 through $lop-size {
+      @include create-margin-for-breakpoint($i, $lg-breakpoint, $prefix);
+      @include create-padding-for-breakpoint($i, $lg-breakpoint, $prefix);
+    }
+
+    @each $font-weight-name, $font-weight-value in $font-weights {
+      @include font-weight-for-breakpoint(
+        $font-weight-value,
+        $font-weight-name,
+        $prefix
+      );
+    }
+  }
+}
+@each $prefix, $value in $breakpoints {
+  @include create-columns-for-breakpoint($value, $prefix);
+}

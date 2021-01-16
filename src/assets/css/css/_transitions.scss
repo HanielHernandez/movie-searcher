@@ -1,0 +1,25 @@
+
+.transition-all{
+    transition-property: all;
+}
+.timing-linear{
+    transition-timing-function: linear;
+}
+.timing-ease-in{
+    transition-timing-function: ease-in;
+}
+.timing-ease-in-out{
+    transition-timing-function: ease-in-out;
+}
+.timing-ease-out{
+    transition-timing-function: ease-out;
+}
+
+
+@for $i from 1 through $lop-size{
+    $duration: $i*50;
+    .duration-#{$duration}{
+
+        transition-duration: #{$duration}ms;
+    }
+}

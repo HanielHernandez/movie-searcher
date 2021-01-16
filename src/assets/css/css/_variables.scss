@@ -1,0 +1,247 @@
+@import "_colors-maps.scss";
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200!default;0,300!default;0,400!default;0,600!default;0,700!default;0,900!default;1,200!default;1,300!default;1,400!default;1,600!default;1,700!default;1,900&display=swap");
+$default-border: 1px solid rgba(0, 0, 0, 0.12);
+$font-color: rgba(0, 0, 0, 0.8) !default;
+//theme colors
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "dark": #212121,
+    "light": #e0e0e0,
+    "primary": #1e88e5,
+    "transparent": rgba(0, 0, 0, 0),
+    "white": #fff,
+  ),
+  $theme-colors
+);
+//font sizes use in letter
+$font-sizes: (
+  "normal": 1rem,
+  "small": 0.875,
+  "caption": 0.75rem,
+);
+//font weights use un clasees
+$font-weights: (
+  "thin": 100,
+  "extralight": 200,
+  "light": 300,
+  "normal": 400,
+  "medium": 500,
+  "semibold": 600,
+  "bold": 700,
+  "black": 800,
+  "extra-black": 900,
+);
+
+$heading-font-sizes: (
+  "h1": 6rem,
+  "h2": 3.75rem,
+  "h3": 3rem,
+  "h4": 2rem,
+  "h5": 1.5rem,
+  "h6": 1.25rem,
+);
+
+$text-font-sizes: (
+  "xs": 0.75rem,
+  "sm": 0.875rem,
+  "normal": 1rem,
+  "lg": 1.125rem,
+  "xl": 1.25rem,
+  "2xl": 1.5rem,
+  "3xl": 1.875rem,
+  "4xl": 2.25rem,
+  "5xl": 3rem,
+  "6xl": 3.75rem,
+  "7xl": 4.5rem,
+  "8xl": 6rem,
+  "9xl": 8rem,
+);
+
+$viewport-from: 1 !default;
+$viewport-to: 101 !default;
+
+$default-border-color: rgba(0, 0, 0, 0.12);
+$default-border-radius: 0.5rem !default;
+
+$lop-size: 24 !default; //defines the amount of interations margin and padding does: example $lop-size: 20 will create  class  .m-{1-20} and .p-{1-20}
+
+$xl-breakpoint: 1280px !default;
+$lg-breakpoint: 1024px !default;
+$md-breakpoint: 768px !default;
+$sm-breakpoint: 576px !default;
+
+$breakpoints: (
+  "sm": $sm-breakpoint,
+  "md": $md-breakpoint,
+  "lg": $lg-breakpoint,
+  "xl": $xl-breakpoint,
+);
+
+$fractions: (12, 6, 4, 3, 2);
+
+$locations: (
+  "t": top,
+  "l": left,
+  "b": bottom,
+  "r": right,
+);
+$corners: (
+  "t": top,
+  "b": bottom,
+);
+$sides: (
+  "l": left,
+  "r": right,
+);
+$positions: ("fixed", "absolute", "relative", "sticky", "initial", "inherit");
+$displays: ("fixed", "absolute", "relative", "sticky", "initial", "inherit");
+//body
+$body-background-color: rgba(0, 0, 0, 0) !default;
+//links
+$link-color: #1976d2 !default;
+$border-radius: 5px !default;
+//navs
+$nav-bar-default-bg-color: #fff !default;
+$nav-bar-border-color: #e0e0e0 !default;
+$nav-bar-border-width: 1px !default;
+$nav-brand-font-size: 1.5rem !default;
+$nav-brand-font-weight: 700 !default;
+$nav-brand-padding: 0.5rem 1rem !default;
+
+$nav-link-padding: 1rem !default;
+$navbar-link-font-size: 1rem !default;
+$nav-link-default-color: #212121 !default;
+$nav-link-hover-bg-color: rgba(0, 0, 0, 0.12);
+$nav-line-height: 1.5 !default;
+//contianer
+$container-padding: 1rem !default;
+
+//messages
+$message-padding: 1rem !default;
+$message-padding-y: 1rem !default;
+$message-padding-x: 1rem !default;
+$message-margin-bottom: 0.5rem !default;
+$message-border-width: 1px !default;
+$message-border-radius: 5px !default;
+/*----messages success----*/
+$message-success-color: #1b5e20 !default;
+$message-success-border: #4caf50 !default;
+$message-succes-background: #c8e6c9 !default;
+
+$message-danger-color: #b71c1c !default;
+$message-danger-border: #f44336 !default;
+$message-danger-background: #ffebee !default;
+
+$color-error: #f44336 !default;
+$background: #fff !default;
+
+//headins h1
+$heading-font-weigth: 700 !default;
+$heading-font-base-size: 64px !default;
+$base-font-weigth: 400 !default;
+$base-font-size: 16px !default;
+
+//borders
+$border-default-color: #e0e0e0 !default;
+
+$primary: rgb(51, 133, 255);
+$secondary: #eee !default;
+$danger: rgb(255, 82, 82);
+$success: rgb(60, 223, 114);
+$warning: rgb(255, 200, 20);
+$info: rgb(17, 227, 255);
+$bg-color: #fff !default;
+
+//Buttons
+$button-padding: 0.5rem 1rem !default;
+$button-bg-color: #fff !default;
+$button-border-color: #e0e0e0 !default;
+$button-radius: 0.25rem !default;
+$button-focus-outline-style: solid !default;
+$button-focus-outline-width: 1px !default;
+$button-focus-outline-color: $default-border !default;
+
+$button-focus-outline: $button-focus-outline-width $button-focus-outline-style
+  $button-focus-outline-color;
+
+$flat-button-hover-color: rgba(#000, 0.05);
+//Forms
+$form-field-margin-bottom: 1rem !default;
+$form-field-label-size: 1rem !default;
+$form-field-label-weigth: 700 !default;
+$form-field-label-mb: 0.5rem !default;
+$form-field-label-heigth: 1.25 !default;
+$form-field-label-color: rgba(0, 0, 0, 0.87) !default;
+
+$form-input-padding: 0.5rem 1rem !default;
+$form-input-font-size: 1rem !default;
+$form-input-font-color: rgba(0, 0, 0, 0.6) !default;
+$form-input-placeholder-color: rgba(0, 0, 0, 0.12) !default;
+$form-input-border-width: 1px !default;
+$form-input-border-color: $default-border-color !default;
+$form-input-border-radius: 0.25rem !default;
+$form-input-background-color: #fff !default;
+$form-input-active-border-width: $form-input-border-width !default;
+$form-input-active-border-color: rgba(0, 0, 0, 0.6) !default;
+$form-input-invalid-color: #b71c1c !default;
+
+$form-text-color: rgba(0, 0, 0, 0.6);
+$form-text-size: 0.75rem !default;
+
+/*TABLES*/
+$table-bg-color: #fff !default;
+$table-heading-font-size: 1rem !default;
+$table-heading-font-weight: 700 !default;
+$table-cell-padding: 0.5em 0.75em !default;
+$table-border: 1px solid rgba(0, 0, 0, 0.12) !default;
+$table-striped-bg-color: #f5f5f5 !default;
+$table-hover-bg-color: #e0e0e0 !default;
+$font-size: 16px !default;
+$nav-bar-padding: 0.5rem 1rem !default;
+$font-family: "Source Sans Pro", Arial, Helvetica, sans-serif !default!default;
+
+/*LIST*/
+$list-border: 1px solid rgba(0, 0, 0, 0.12);
+$list-border-radius: 5px !default;
+$list-item-padding: 0.5rem 1rem !default;
+$list-item-hover-color: #eee !default;
+$list-margin-bottom: 1rem !default;
+
+/*cards*/
+$card-padding: 1rem !default;
+$card-border-width: 1px !default;
+$card-border-style: solid !default;
+$card-border-color: rgba(0, 0, 0, 0.12);
+$card-border-radius: 5px !default;
+
+$card-title-font-size: 20px !default;
+$card-title-font-weight: 600 !default;
+$card-title-font-color: rgba(0, 0, 0, 0.8);
+$card-title-line-height: 1.2 !default;
+
+$card-subtitle-font-size: 16px !default;
+$card-subtitle-font-weight: 400 !default;
+$card-subtitle-font-color: rgba(0, 0, 0, 0.53);
+$card-subtitle-line-height: 1.25 !default;
+
+$card-avatar-width: 40px !default;
+$card-avatar-height: 40px !default;
+$card-avatar-margin-right: 1rem !default;
+
+// spinner
+$spinner-width: 2.5rem !default;
+$spinner-height: 2.5rem !default;
+$spinner-boder-width: 2px !default;
+$spinner-boder-style: solid !default;
+$spinner-border-color: rgba(0, 0, 0, 0.12) !default;
+$spinner-line-width: 2px !default;
+$spinner-line-color: rgba(0, 0, 0, 0.8) !default;
+$spinner-line-style: solid !default;
+$spinner-animation-time: 1s !default;
+$spinner-animation-ease: linear !default;
+$spinner-animation: spin !default;
+
+//sidebar
+$sidebar-width: 350px !default;
+$sidebar-position: relative !default;
