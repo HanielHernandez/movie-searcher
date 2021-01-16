@@ -1,3 +1,14 @@
 <div>
-  <div class="col"></div>
+  <div class="z-20" *ngIf="movie">
+    <div>
+      <img [src]="getBrackDrop()" class="w-12/12" alt="" />
+    </div>
+    <div class="col w-lg-6/12 w-sm-12/12">
+      <h4>
+        {{ movie.title }}
+      </h4>
+
+      <p>{{ movie.overview }}</p>
+    </div>
+  </div>
 </div>

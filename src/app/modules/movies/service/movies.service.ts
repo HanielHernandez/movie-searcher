@@ -37,4 +37,14 @@ export class MoviesService {
       return new Movie(data);
     }));
   }
+  /**
+   * Returs the creddits of a movie
+   * @param id movie id
+   */
+  getCredits(id: number): Observable<any> {
+    return this.http.get(`${environment.apiUrl}/3/movie/${id}/credits`).pipe(map(data => {
+      return new Movie(data);
+    }));
+  }
+
 }

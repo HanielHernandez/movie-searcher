@@ -31,5 +31,11 @@ export class MovieDetailsComponent implements OnInit {
       this.movie = movie;
     });
   }
+  /**
+   * Returns backdrop
+   */
+  getBrackDrop(): string {
+    return this.movies.getImage(this.movie.backdropPath, 'w1280');
+  }
 
 }

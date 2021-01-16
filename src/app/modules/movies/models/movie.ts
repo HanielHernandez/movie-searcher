@@ -13,7 +13,7 @@ export class Movie {
     video: boolean;
     voteAverage: number;
     voteCount: number;
-
+    backdropPath: string;
     productionCompanies: ProductionCompany[];
     revenue: number;
     runtime: number;
@@ -35,6 +35,7 @@ export class Movie {
         this.voteCount = json.vote_count;
         this.productionCompanies = json.production_companies ? json.production_companies.map(p => new ProductionCompany(p)) : [];
         this.spokenLanguages = json.spoken_languages ? json.spoken_languages.map(l => new Languages(l)) : [];
+        this.backdropPath = json.backdrop_path;
     }
 }
 
